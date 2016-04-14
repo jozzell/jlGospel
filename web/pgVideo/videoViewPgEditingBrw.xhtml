@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"   
+       xmlns:pou="http://primefaces.org/ui" 
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:include src="videoViewPgEditingBrw-Style.xhtml" />
+    <ui:include src="jvp-TOP.xhtml" />
+    <pou:panelGrid style="margin:0px 0px;  background:  transparent; background-color:  transparent; padding: 0" 
+                   styleClass="noBorder"         >
+       
+        <pou:row style="vertical-align: top;padding:0px" >
+            <pou:column   style=" vertical-align: top;padding:0px; vertical-align:  ">
+                 <ui:include src="./videoViewPgEditingBrw-Ads.xhtml"/>
+            </pou:column>
+            <pou:column   style=" vertical-align: top;padding:0px">
+                <ui:include src="#{mgrVideoProduction.url}" />
+                
+            </pou:column>
+       
+            
+        </pou:row>
+       
+         
+    </pou:panelGrid>
+
+
+
+
+
+
+</html>
+

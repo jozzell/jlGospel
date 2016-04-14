@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"   
+       xmlns:pou="http://primefaces.org/ui">
+
+    <pou:poll interval="300" listener="#{mgrVideoProduction.refreshSession()}" />
+    <img src="/jvp/quicklinks/gospel/logo.png"   id="tb" width="710" style=" background:  none"/>
+    <pou:megaMenu   styleClass="megaMenu" orientation="horizontal" autoDisplay="false" style=" width: 700px"  >
+        <pou:menuitem value="Home"   
+                      style=" font-size: 14px"
+                      action="#{mgrVideoProduction.videoMgrObjMenu.setHome()}" />  
+      <pou:submenu label="Voices of Inspiration" style=" font-size: 14px" >
+           
+            <pou:column    >
+
+                <pou:submenu label="Video's"  >
+                    <pou:menuitem value="26th Anniversary 2015 " 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.set26nd()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="25th Anniversary 2014 (Brooklyn Marriott)" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.set25nd()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="24nd Anniversary 2013" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.set24nd()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="23nd Anniversary 2012" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.set23nd()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="22nd Anniversary 2011" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.set22nd()}"
+                                  style=" font-size: 13px"  />
+
+
+
+                </pou:submenu>
+
+
+
+            </pou:column>
+           
+
+
+        </pou:submenu>
+         <pou:submenu label="Manhasset/Great Neck" style=" font-size: 14px" >
+           
+          
+           
+            <pou:column >
+                <pou:submenu label="Mt. Olive Baptist Church">
+                    <pou:menuitem value="Men's Day 2014" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.calMount()}"
+                                  style=" font-size: 13px"  />
+                </pou:submenu>
+                <pou:submenu label="First Baptist Church">
+                     <pou:menuitem value="The Evolution of Gospel Music" 
+                                   action="#{mgrVideoProduction.videoMgrObjMenu.calFirstEvo()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="Royal Priesthool 4th Anniversary" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.calFirst()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="Christmas Concert 2014" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.calFirst2014XMas()}"
+                                  style=" font-size: 13px"  />
+                    <pou:menuitem value="Gospel Concert" 
+                                  action="#{mgrVideoProduction.videoMgrObjMenu.calFirst2009()}"
+                                  style=" font-size: 13px"  />
+                </pou:submenu>
+            </pou:column>
+
+
+        </pou:submenu>
+    </pou:megaMenu>
+   
+
+</html>
+

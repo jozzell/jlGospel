@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"   
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:pou="http://primefaces.org/ui">  
+
+
+
+
+
+    <ui:include src="../videoViewPgEditingBrw-Style.xhtml" />
+    
+   
+    
+    <pou:dataGrid var="videoMetrixMgrBean" value="#{videoMetrixMgrObj.metrixList}" columns="1" 
+                  rows="12"  paginatorAlwaysVisible="false"    
+                  paginator="true"  style=" vertical-align: top; background:   transparent; background-color:  transparent      " 
+                  styleClass=".ui-panelgrid tr,.ui-panelgrid td,.ui-layout-center .ui-layout-unit-content,ui-datatable"  
+                  >
+
+
+        <h:panelGrid  style="vertical-align: top;background:  transparent; margin: 0px 0px;"
+                      styleClass=".ui-panelgrid tr,.ui-panelgrid td,.ui-layout-center .ui-layout-unit-content,ui-datatable"  >
+
+
+            <pou:row  style="vertical-align: top;padding:0px">
+                <pou:column style=" vertical-align: top;padding:1px; vertical-align:  central" >
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullMainVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullMainVideoBean().imageName}" alt="" width="400" style=" background:  none"/>
+                        <br/>
+                        <pou:inputTextarea  rows="2" cols="41" readonly="true" 
+                                            value="#{videoMetrixMgrBean.pullMainVideoBean().videoDesc}"   
+                                            style=" text-align:  center ;font-size: 18px; box-shadow: none; 
+                                            border:  white; background:   transparent; background-color:  transparent"  />
+
+                    </h:commandLink>
+                </pou:column>
+                <pou:column style=" vertical-align: top;padding:1px" >
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullTopSubVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullTopSubVideoBean().imageName}" alt="" width="153" style=" background:  none"/>
+                        <br/>
+                        <pou:inputTextarea  rows="3" cols="23" readonly="true" 
+                                            value="#{videoMetrixMgrBean.pullTopSubVideoBean().videoDesc}"   
+                                            style=" text-align:  center ;font-size: 10px; box-shadow: none; 
+                                            border:  white; background:   transparent; background-color:  transparent"  />
+
+                    </h:commandLink>
+                    <br/>
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullMiddleSubVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullMiddleSubVideoBean().imageName}" alt="" width="153" style=" background:  none"/>
+                        <br/>
+                        <pou:inputTextarea  rows="3" cols="23" readonly="true" 
+                                            value="#{videoMetrixMgrBean.pullMiddleSubVideoBean().videoDesc}"   
+                                            style=" text-align:  center ;font-size: 10px; box-shadow: none; 
+                                            border:  white; background:   transparent; background-color:  transparent"/>
+                    </h:commandLink>                   
+                </pou:column>
+            </pou:row>
+        </h:panelGrid>
+
+
+    </pou:dataGrid>
+
+
+
+</html>

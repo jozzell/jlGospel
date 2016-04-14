@@ -1,0 +1,1 @@
+INSERT INTO `jlroomsc_videoproduction_001`.`jvp_lookup` (`lookup_type`, `lookup_desc`) VALUES ('98', '26th Anniversary (2015)');

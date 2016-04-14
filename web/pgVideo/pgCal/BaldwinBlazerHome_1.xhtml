@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml"   
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:pou="http://primefaces.org/ui">  
+
+    <ui:include src="../videoViewPgEditingBrw-Style.xhtml" />
+
+
+
+
+    <pou:dataGrid var="videoMetrixMgrBean" value="#{videoMetrixMgrObj.metrixList}" columns="1" 
+                  rows="6"  paginatorAlwaysVisible="false"  
+                  paginator="true"  style="  background:   transparent; background-color:  transparent      " 
+                  styleClass=".ui-panelgrid tr,.ui-panelgrid td,.ui-layout-center .ui-layout-unit-content,ui-datatable"  
+
+                  >
+
+
+        <h:panelGrid  style="background:  transparent">
+
+            <pou:row>
+                <pou:column style=" vertical-align: top" >
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullMainVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullMainVideoBean().imageName}" alt="" width="470" style=" background:  none"/>
+                    </h:commandLink>
+                </pou:column>
+
+                <pou:column style=" vertical-align: top" >
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullTopSubVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullTopSubVideoBean().imageName}" alt="" width="150" style=" background:  none"/>
+                    </h:commandLink>
+                    
+                   
+                    
+                   
+              
+                    
+                    <br/>
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullMiddleSubVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullMiddleSubVideoBean().imageName}" alt="" width="150" style=" background:  none"/>
+                    </h:commandLink>
+                    <br/>
+                    <h:commandLink action="#{videoMgrObj.setSelected()}"   >
+                        <f:setPropertyActionListener 
+                            value="#{videoMetrixMgrBean.pullBottomSubVideoBean()}" 
+                            target="#{videoMgrObj.videoBean}" />
+                        <img src="/#{videoMetrixMgrBean.pullBottomSubVideoBean().imageName}" alt="" width="150" style=" background:  none"/>
+                    </h:commandLink>
+                </pou:column>
+            </pou:row>
+        </h:panelGrid>
+
+
+    </pou:dataGrid>
+     
+           
+
+</html>
